@@ -1,0 +1,10 @@
+Für alle Pakete...
+ Ist DNS Query Request? dns.flags.response == 0
+   request_hash[dns.id] = frame.time_epoch;
+ Ist DNS Query Response? dns.flags.response == 1
+   Kennen wir den Request dazu? if exist request_hash[dns.id]
+     Nur dann errechnen wir das Delta:
+     delta = frame.time_epoch - request_hash[dns.id]
+     print delta
+     delete request_hash[dns.id]
+
