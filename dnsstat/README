@@ -15,3 +15,7 @@ tshark -Tfields -e dns.time -r dns.pcap -Y 'dns.flags.response == 1'
 
 However, I want to make up a full DNS statistics tool in Lua. I know how to
 do it with other tools, but Lua, man. Lua.
+
+Intersting as well:
+tshark -Tfields -e dns.time -e dns.flags.rcode -e dns.count.answers -r
+dns.pcap -Y 'dns.flags.response == 1'
