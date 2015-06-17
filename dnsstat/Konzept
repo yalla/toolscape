@@ -1,3 +1,9 @@
+Notizen:
+ 1. LUA/Wireshark Beispiel:
+    https://wiki.wireshark.org/Lua/Examples#Extract_field_values
+ 2. LUA Doku Arrays:
+    https://en.wikibooks.org/wiki/Lua_Programming/Tables
+
 Für alle Pakete...
  Ist DNS Query Request? dns.flags.response == 0
    request_hash[dns.id] = frame.time_epoch;
