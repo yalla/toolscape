@@ -1,3 +1,17 @@
 Wireshark LUA Script for simple DNS response times measurement.
 Invocation:
 $ tshark -q -X lua_script:dnsstat.lua -r dns.pcap
+
+It doesn't work at the moment, and yes, I do know that this does the same:
+
+tshark -Tfields -e dns.time -r dns.pcap -Y 'dns.flags.response == 1'
+0.159062000
+0.000612000
+0.000505000
+0.085828000
+0.000589000
+0.000486000
+...
+
+However, I want to make up a full DNS statistics tool in Lua. I know how to
+do it with other tools, but Lua, man. Lua.
