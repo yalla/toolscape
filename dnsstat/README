@@ -1,1 +1,3 @@
 Wireshark LUA Script for simple DNS response times measurement.
+Invocation:
+$ tshark -q -X lua_script:dnsstat.lua -r dns.pcap
